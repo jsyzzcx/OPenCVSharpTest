@@ -1,0 +1,9 @@
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\bin\Debug\OpenCVSharpTest.exe.config
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\bin\Debug\OpenCVSharpTest.exe
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\bin\Debug\OpenCVSharpTest.pdb
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.csprojAssemblyReference.cache
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.Properties.Resources.resources
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.csproj.GenerateResource.cache
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.csproj.CoreCompileInputs.cache
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.exe
+D:\Project\OpenCVSharpTest\OpenCVSharpTest\obj\Debug\OpenCVSharpTest.pdb
