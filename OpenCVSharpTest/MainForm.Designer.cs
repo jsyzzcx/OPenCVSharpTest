@@ -32,8 +32,10 @@
             this.PictureBox_Source = new System.Windows.Forms.PictureBox();
             this.openBtn = new System.Windows.Forms.Button();
             this.PictureBox_Target = new System.Windows.Forms.PictureBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Source)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Target)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -108,11 +110,22 @@
             this.PictureBox_Target.TabIndex = 11;
             this.PictureBox_Target.TabStop = false;
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(268, 1);
+            this.trackBar1.Maximum = 20;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(947, 45);
+            this.trackBar1.TabIndex = 14;
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 504);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.PictureBox_Target);
             this.Controls.Add(this.openBtn);
             this.Controls.Add(this.PictureBox_Source);
@@ -121,6 +134,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Source)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Target)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +146,7 @@
         private System.Windows.Forms.PictureBox PictureBox_Source;
         private System.Windows.Forms.Button openBtn;
         private System.Windows.Forms.PictureBox PictureBox_Target;
+        private System.Windows.Forms.TrackBar trackBar1;
     }
 }
 
