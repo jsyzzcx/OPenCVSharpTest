@@ -65,6 +65,9 @@ namespace OpenCVSharpTest
             /// 边缘检测-canny
             /// </summary>
             canny,
+            /// <summary>
+            /// 边缘检测-laplacian
+            /// </summary>
             Laplacian,
             carve,
             rever_lr,
@@ -164,13 +167,23 @@ namespace OpenCVSharpTest
                     #endregion
                     break;
                 case (int)lb1_list.sobel:
-                    #region sobel边缘检测
+                    #region 边缘检测-sobel
                     sobel(tagetMat);
                     #endregion
                     break;
                 case (int)lb1_list.scharr:
-                    #region scharr边缘检测
+                    #region 边缘检测-scharr
                     scharr(tagetMat);
+                    #endregion
+                    break;
+                case (int)lb1_list.canny:
+                    #region 边缘检测-canny
+                    canny(this.trackBar1.Value, sourceMat);
+                    #endregion
+                    break;
+                case (int)lb1_list.Laplacian:
+                    #region 边缘检测-Laplacian
+                    laplacian(this.trackBar1.Value, sourceMat);
                     #endregion
                     break;
                 default:
@@ -205,6 +218,16 @@ namespace OpenCVSharpTest
                 case (int)lb1_list.bilateralFilter:
                     #region 双边滤波
                     bilateralFilter(this.trackBar1.Value, sourceMat);
+                    #endregion
+                    break;
+                case (int)lb1_list.canny:
+                    #region 边缘检测-canny
+                    canny(this.trackBar1.Value, sourceMat);
+                    #endregion
+                    break;
+                case (int)lb1_list.Laplacian:
+                    #region 边缘检测-Laplacian
+                    laplacian(this.trackBar1.Value, sourceMat);
                     #endregion
                     break;
                 default:
@@ -348,5 +371,25 @@ namespace OpenCVSharpTest
             tempMat.Release();
             Thread.Sleep(50);
         }
+        /// <summary>
+        /// 边缘检测-Laplacian
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <param name="mat"></param>
+        private void laplacian(int pos, Mat mat)
+        {
+            Mat tempMat = new Mat();
+            mat.CopyTo(tempMat);
+            if (pos * 2 + 1 <=31)
+            {
+                Cv2.Laplacian(tempMat, tempMat, -1, pos * 2 + 1);
+                tempMat.CopyTo(tagetMat);
+                PictureBox_Target.Image = tagetMat.ToBitmap();
+            }
+
+            tempMat.Release();
+        }
+
+
     }
 }
