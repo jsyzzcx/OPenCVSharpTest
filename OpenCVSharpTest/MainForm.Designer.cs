@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.PictureBox_source = new System.Windows.Forms.PictureBox();
+            this.PictureBox_Source = new System.Windows.Forms.PictureBox();
             this.openBtn = new System.Windows.Forms.Button();
-            this.PictureBox_target = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_source)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_target)).BeginInit();
+            this.PictureBox_Target = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Source)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Target)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -77,14 +77,14 @@
             this.listBox1.TabIndex = 7;
             this.listBox1.DoubleClick += new System.EventHandler(this.listBox1_DoubleClick);
             // 
-            // PictureBox_source
+            // PictureBox_Source
             // 
-            this.PictureBox_source.Location = new System.Drawing.Point(168, 44);
-            this.PictureBox_source.Name = "PictureBox_source";
-            this.PictureBox_source.Size = new System.Drawing.Size(524, 449);
-            this.PictureBox_source.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_source.TabIndex = 9;
-            this.PictureBox_source.TabStop = false;
+            this.PictureBox_Source.Location = new System.Drawing.Point(168, 44);
+            this.PictureBox_Source.Name = "PictureBox_Source";
+            this.PictureBox_Source.Size = new System.Drawing.Size(524, 449);
+            this.PictureBox_Source.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Source.TabIndex = 9;
+            this.PictureBox_Source.TabStop = false;
             // 
             // openBtn
             // 
@@ -99,28 +99,28 @@
             this.openBtn.UseVisualStyleBackColor = true;
             this.openBtn.Click += new System.EventHandler(this.openBtn_Click);
             // 
-            // PictureBox_target
+            // PictureBox_Target
             // 
-            this.PictureBox_target.Location = new System.Drawing.Point(700, 44);
-            this.PictureBox_target.Name = "PictureBox_target";
-            this.PictureBox_target.Size = new System.Drawing.Size(524, 449);
-            this.PictureBox_target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureBox_target.TabIndex = 11;
-            this.PictureBox_target.TabStop = false;
+            this.PictureBox_Target.Location = new System.Drawing.Point(700, 44);
+            this.PictureBox_Target.Name = "PictureBox_Target";
+            this.PictureBox_Target.Size = new System.Drawing.Size(524, 449);
+            this.PictureBox_Target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureBox_Target.TabIndex = 11;
+            this.PictureBox_Target.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 504);
-            this.Controls.Add(this.PictureBox_target);
+            this.Controls.Add(this.PictureBox_Target);
             this.Controls.Add(this.openBtn);
-            this.Controls.Add(this.PictureBox_source);
+            this.Controls.Add(this.PictureBox_Source);
             this.Controls.Add(this.listBox1);
             this.Name = "MainForm";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_source)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_target)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Source)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBox_Target)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,9 +129,9 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.PictureBox PictureBox_source;
+        private System.Windows.Forms.PictureBox PictureBox_Source;
         private System.Windows.Forms.Button openBtn;
-        private System.Windows.Forms.PictureBox PictureBox_target;
+        private System.Windows.Forms.PictureBox PictureBox_Target;
     }
 }
 

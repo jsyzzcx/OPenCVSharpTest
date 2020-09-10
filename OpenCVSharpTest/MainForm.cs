@@ -19,7 +19,8 @@ namespace OpenCVSharpTest
             InitializeComponent();
         }
 
-        public Mat pictureSourceMat;//当前主窗体图像
+        public Mat sourceMat;//当前主窗体图像
+        public Mat tagetMat;//当前主窗体图像
         public int selectIndex;
         public enum lb1_list//记录操作方法
         {
@@ -27,6 +28,9 @@ namespace OpenCVSharpTest
             /// 灰度
             /// </summary>
             gray,
+            /// <summary>
+            /// 反色
+            /// </summary>
             reverse,
             binary,
             gaussianBlur,
@@ -68,10 +72,11 @@ namespace OpenCVSharpTest
             {
                 try
                 {
-                    this.PictureBox_source.Load(ofd1.FileName);
-                    pictureSourceMat = new Mat(ofd1.FileName);
+                    this.PictureBox_Source.Load(ofd1.FileName);
+                    sourceMat = new Mat(ofd1.FileName);
+                    tagetMat = new Mat(ofd1.FileName);
                 }
-                catch (Exception)
+                catch (Exception ex )
                 {
                     MessageBox.Show("打开失败，请检查文件格式是否符合");
                 }
@@ -90,17 +95,24 @@ namespace OpenCVSharpTest
             switch (selectIndex)
             {
                 case (int)lb1_list.gray:
-                    if (pictureSourceMat.Channels() == 3)
+                    #region 转为灰度图
+                    if (sourceMat.Channels() == 3)
                     {
-                        Cv2.CvtColor(pictureSourceMat, pictureSourceMat, ColorConversionCodes.BGR2GRAY);
-                        this.PictureBox_target.Image = pictureSourceMat.ToBitmap();
+                        Cv2.CvtColor(sourceMat, tagetMat, ColorConversionCodes.BGR2GRAY);
+                        this.PictureBox_Target.Image = tagetMat.ToBitmap();
                     }
                     else
                     {
                         MessageBox.Show("已是灰度图像，不要重复操作");
                     }
+                    #endregion
                     break;
- 
+                case (int)lb1_list.reverse:
+                    #region 反色
+                    tagetMat = ~sourceMat;
+                    PictureBox_Target.Image = tagetMat.ToBitmap();
+                    #endregion
+                    break;
                 default:
                     break;
             }
